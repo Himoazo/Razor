@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - labb1.1</title>
+	<script type="importmap"></script>
+	<link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<h1><a asp-page="/Index">Laboration 1.1</a></h1>
+		</div>
+		
+		
+		@{
+			var today = DateOnly.FromDateTime(DateTime.Now);
+
+		}
+
+		<div id="date">
+			<p>@today</p>
+		</div>
+		
+	</header>
+
+	
+		<main>
+		<div id="nav">
+			<nav class="navbar">
+				<ul>
+					<li>
+						<a asp-page="/Index">Start</a>
+					</li>
+					<li>
+						<a asp-page="/Razor">Razor</a>
+					</li>
+					<li>
+						<a asp-page="/about">Om sidan</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div id="content">
+			@RenderBody()
+		</div>
+			
+		</main>
+	
+
+	<footer>
+		<div>
+			Av Hoomam Azrooni - Kontakta mig via e-post: <a href="mailto:hoaz1600@student.miun.se">hoaz1600@student.miun.se </a>
+		</div>
+	</footer>
+
+	<script src="~/js/main.js" asp-append-version="true"></script>
+</body>
+</html>

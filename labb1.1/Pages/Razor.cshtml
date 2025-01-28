@@ -1,0 +1,39 @@
+﻿@page
+@model labb1._1.Pages.RazorModel
+@{
+	ViewData["Title"] = "Razor";
+}
+
+@{
+	List<string> courses = ["DT057G, Webbutveckling I", "DT084G, Introduktion till programmering i JavaScript", "DT200G, Grafisk teknik för webb",
+	"DT068G, Webbanvändbarhet", "DT003G, Databaser", "DT211G, Frontend-baserad webbutveckling", "DT207G, Backend-baserad webbutveckling", "DT208G, Programmering i TypeScript",
+	"IK060G, Projektledning", "DT071G, Programmering i C#.NET", "DT193G, Fullstack-utveckling med ramverk", "DT209G, Webbutveckling för WordPress"];
+}
+
+<h2>Razor</h2>
+<h3>Information</h3>
+<div id="dateTime"> <p><strong>Datum/Klockslag:</strong> @DateTime.Now </p></div>
+
+@{
+	DateTime theDate = DateTime.Now;
+}
+
+@if (theDate.DayOfWeek == DayOfWeek.Friday)
+{
+	<p class="friday">Idag är Fredag</p>
+}
+else
+{
+	<p class="friday">Idag är inte Fredag</p>
+}
+
+
+<h3>Kurser jag läst:</h3>
+<div id="courseList">
+	<ul>
+		@foreach (var course in courses)
+		{
+			<li class="course">@course</li>
+		}
+	</ul>
+</div>

@@ -1,0 +1,140 @@
+﻿*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: beige;
+}
+
+h2, h3 {
+    margin: 2%;
+}
+
+/*Header*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+    .logo h1 {
+        margin: 0;
+    }
+
+    .logo h1 a {
+        text-decoration: none;
+        color: black;
+    }
+
+#date {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    font-weight: bold;
+}
+
+    #date p {
+        margin: 0;
+        padding-top: 0.5rem;
+    }
+
+/*Main*/
+main {
+    display: flex;
+    width: 100%;
+    min-height: 100vh; 
+}
+
+/*Navigering*/
+#nav {
+    width: 25%;
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: deepskyblue;
+}
+
+    #nav ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    #nav ul li{
+        
+        margin: 0.5rem auto;
+        background-color: white;
+    }
+
+        #nav ul li a {
+            width: 100%;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            color: black;
+            font-weight: bold;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+.active {
+    background-color: pink;
+}
+
+/*Razor*/
+
+#dateTime{
+    margin: 2%;
+    display: flex;
+}
+
+
+
+#content {
+    width: 75%;
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: lightpink;
+}
+
+#courseList{
+    margin: 1%;
+    padding-left: 2em;
+}
+.course {
+    margin-bottom: 0.8rem;
+}
+
+.friday{
+    margin: 2%;
+}
+
+/*Footer*/
+
+footer div{
+    width:fit-content;
+    padding: 1%;
+    margin: 0 auto;
+    height: 3vh;
+}
+
+@media screen and (max-width: 768px) {
+    .logo h1 {
+        font-size: 1.2em;
+    }
+
+    footer div {
+        font-size: 0.9em;
+    }
+
+    #nav ul li a {
+        font-size: 0.9em;
+    }
+}
